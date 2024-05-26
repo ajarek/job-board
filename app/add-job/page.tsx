@@ -1,8 +1,10 @@
-import React from 'react'
+import FormAddJob from '@/components/FormAddJob'
 
 const AddJob = () => {
   return (
-    <div>AddJob</div>
+    <div className='min-h-screen  flex flex-col justify-start items-center px-24 py-12'>
+      <FormAddJob/>
+    </div>
   )
 }
 

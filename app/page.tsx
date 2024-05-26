@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import { placeholderJobs } from '@/public/data/data'
 import CardJob from '@/components/CardJob'
+
 export default function Home() {
   
 
