@@ -30,7 +30,7 @@ const MobileNav = () => {
             className='flex items-center gap-2 max-sm-gap-1'
           >
             <Image
-              src='/images/job.jpg'
+              src='/data/job.jpg'
               width={30}
               height={32}
               alt='logo'

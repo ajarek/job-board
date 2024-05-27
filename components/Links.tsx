@@ -11,7 +11,7 @@ const Links = () => {
         className='flex items-center gap-2 max-sm-gap-1'
       >
         <Image
-          src='https://github.com/ajarek/next-14-ep-43-job-board/blob/main/public/images/job.jpg?raw=true'
+          src='/data/job.jpg'
           width={30}
           height={32}
           alt='logo'
