@@ -74,3 +74,22 @@
       @apply bg-background text-foreground;
     }
   }
+  .font-bold{
+    font-weight: 700;
+  }
+  .italic{
+    font-style: italic;
+  }
+  .underline{
+    text-decoration: underline;
+  }
+  .line-through{
+    text-decoration: line-through;
+  }
+/* Suggested code may be subject to a license. Learn more: ~LicenseLog:1293256207. */
+  .uppercase{
+    text-transform: uppercase;
+  }
+  .capitalize{
+    text-transform: capitalize;
+  }

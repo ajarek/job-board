@@ -114,12 +114,8 @@ const FormAddJob = () => {
         </div>
         <div className='flex flex-col gap-4'>
           <Label htmlFor='description'>Description</Label>
-          <TextEditor placeholder={'lol'} readonly={false} name={'description'} />
-          <Input
-            type='text'
-            name='description'
-            required
-          />
+          
+          <TextEditor/>
         </div>
         
 
