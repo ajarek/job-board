@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import { Input } from './ui/input'
 import { Button } from './ui/button'
 import { Label } from '@/components/ui/label'
-import TextEditor from '@/components/TextEditor'
+import TextAreaComponent from '@/components/Editor'
 import {
   Select,
   SelectContent,
@@ -115,7 +115,7 @@ const FormAddJob = () => {
         <div className='flex flex-col gap-4'>
           <Label htmlFor='description'>Description</Label>
           
-          <TextEditor/>
+          <TextAreaComponent/>
         </div>
         
 
