@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import { Input } from './ui/input'
 import { Button } from './ui/button'
 import { Label } from '@/components/ui/label'
-import TextAreaComponent from '@/components/Editor'
+import TextAreaComponent from '@/components/TextEditor'
 import {
   Select,
   SelectContent,
@@ -89,19 +89,21 @@ const FormAddJob = () => {
             required
           />
         </div>
-        <div className='flex flex-row items-center gap-4 mt-4'>
-          <Label htmlFor='applicationEmail'>Apply Email</Label>
+        <div className='flex flex-row items-center flex-wrap gap-4 mt-4'>
+          <Label htmlFor='applicationEmail' className='w-52'>Apply Email</Label>
           <Input
             type='text'
             name='applicationEmail'
             required
+            className='w-full'
           />
           <span>or</span>
-          <Label htmlFor='applicationUrl'>Apply Url</Label>
+          <Label htmlFor='applicationUrl' className='w-48'>Apply Url</Label>
           <Input
             type='text'
             name='applicationUrl'
             required
+            className='w-full'
           />
         </div>
         <div className='flex flex-col gap-4'>
