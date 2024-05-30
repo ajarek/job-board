@@ -1,11 +1,10 @@
-import { Button } from '@/components/ui/button'
-import Image from 'next/image'
-import { placeholderJobs } from '@/public/data/data'
+import connectToDb from '@/lib/connectToDb'
+import { Jobs } from '@/lib/models'
 import CardJob from '@/components/CardJob'
 
-export default function Home() {
-  
-
+export default async function Home() {
+  await connectToDb()
+   const placeholderJobs = await Jobs.find({})
   return (
     <main className='flex min-h-screen flex-col items-center justify-start px-24 py-12 max-lg:px-4'>
       <h1 className='text-5xl font-bold'>All developer jobs</h1>

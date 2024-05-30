@@ -5,6 +5,7 @@ import { Input } from './ui/input'
 import { Button } from './ui/button'
 import { Label } from '@/components/ui/label'
 import TextAreaComponent from '@/components/TextEditor'
+import {createJob} from '@/lib/action'
 import {
   Select,
   SelectContent,
@@ -16,14 +17,14 @@ import {
 
 const FormAddJob = () => {
   const ref = useRef<HTMLFormElement>(null)
-  const addJob = async (formData) => {}
+  
   return (
     <div className=' w-full flex flex-col  justify-center items-center max-sm:justify-start  gap-4  '>
       <h1 className='text-2xl'>Add Job</h1>
       <form
         ref={ref}
         action={async (formData) => {
-          await addJob(formData)
+          await createJob(formData)
           ref.current?.reset()
         }}
         className='w-full flex flex-col gap-4 '
@@ -89,7 +90,7 @@ const FormAddJob = () => {
             required
           />
         </div>
-        <div className='flex flex-row items-center flex-wrap gap-4 mt-4'>
+        <div className='flex flex-row items-center  gap-4 mt-4'>
           <Label htmlFor='applicationEmail' className='w-52'>Apply Email</Label>
           <Input
             type='text'
