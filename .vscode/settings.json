@@ -1,4 +1,6 @@
 {
       "IDX.aI.enableInlineCompletion": true,
-      "IDX.aI.enableCodebaseIndexing": true
+      "IDX.aI.enableCodebaseIndexing": true,
+      "editor.fontSize": 18,
+      "workbench.sideBar.location": "right"
 }
