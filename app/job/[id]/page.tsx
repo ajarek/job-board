@@ -5,7 +5,7 @@ const JobId = async ({params}:{params: {id: string}}) => {
 const {id} = params
   await connectToDb()
     const jobId = await Jobs.find({_id: id})
-    console.log(jobId)
+    
 
   return (
     <div className="min-h-[calc(100vh-64px)] w-full grid grid-cols-2 gap-12 max-lg:grid-cols-1 px-12 py-12 ">

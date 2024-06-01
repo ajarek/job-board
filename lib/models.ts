@@ -39,7 +39,7 @@ const jobsSchema =new mongoose.Schema({
   approved: { type: Boolean, default: false },
   companyName: { type: String, required: true },
   description: { type: String, required: true },
-  location: { type: String, required: true },
+  location: { type: String },
   locationType: { type: String, required: true },
   salary: { type: Number, required: true },
   slug: { type: String },
