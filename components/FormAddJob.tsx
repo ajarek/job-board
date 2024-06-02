@@ -5,7 +5,7 @@ import { Input } from './ui/input'
 import { Button } from './ui/button'
 import { Label } from '@/components/ui/label'
 import TextAreaComponent from '@/components/TextEditor'
-import {createJob} from '@/lib/action'
+import { createJob } from '@/lib/action'
 import {
   Select,
   SelectContent,
@@ -14,118 +14,93 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 
-
 const FormAddJob = () => {
   const ref = useRef<HTMLFormElement>(null)
-  
+
   return (
-    <div className=' w-full flex flex-col  justify-center items-center max-sm:justify-start  gap-4  '>
-      <h1 className='text-2xl'>Add Job</h1>
+    <div className=" w-full flex flex-col  justify-center items-center max-sm:justify-start  gap-4  ">
+      <h1 className="text-2xl">Add Job</h1>
       <form
         ref={ref}
         action={async (formData) => {
           await createJob(formData)
           ref.current?.reset()
         }}
-        className='w-full flex flex-col gap-4 '
+        className="w-full flex flex-col gap-4 "
       >
-        <div className='flex flex-col gap-4'>
-          <Label htmlFor='title'>Job title</Label>
-          <Input
-            type='text'
-            name='title'
-            required
-            className=''
-          />
+        <div className="flex flex-col gap-4">
+          <Label htmlFor="title">Job title</Label>
+          <Input type="text" name="title" required className="" />
         </div>
-        <div className='flex flex-col gap-4'>
-          <Label htmlFor='type'>Job type:</Label>
-          <Select
-            defaultValue=''
-            name='type'
-          >
-            <SelectTrigger className=''>
-              <SelectValue placeholder='Select a Type Job' />
+        <div className="flex flex-col gap-4">
+          <Label htmlFor="type">Job type:</Label>
+          <Select defaultValue="" name="type">
+            <SelectTrigger className="">
+              <SelectValue placeholder="Select a Type Job" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value='Full-time'>Full time</SelectItem>
-              <SelectItem value='On site'>Part time</SelectItem>
-              <SelectItem value='Contract'>Contract</SelectItem>
-              <SelectItem value='Internship'>Internship</SelectItem>
-              <SelectItem value='Temporary'>Temporary</SelectItem>
-              <SelectItem value='Volunteer'>Volunteer</SelectItem>
+              <SelectItem value="Full-time">Full time</SelectItem>
+              <SelectItem value="On site">Part time</SelectItem>
+              <SelectItem value="Contract">Contract</SelectItem>
+              <SelectItem value="Internship">Internship</SelectItem>
+              <SelectItem value="Temporary">Temporary</SelectItem>
+              <SelectItem value="Volunteer">Volunteer</SelectItem>
             </SelectContent>
           </Select>
         </div>
-        <div className='flex flex-col gap-4'>
-          <Label htmlFor='companyName'>Company:</Label>
-          <Input
-            type='text'
-            name='companyName'
-            required
-            className=''
-          />
+        <div className="flex flex-col gap-4">
+          <Label htmlFor="companyName">Company:</Label>
+          <Input type="text" name="companyName" required className="" />
         </div>
-        <div className='flex flex-col gap-4'>
-          <Label htmlFor='locationType'>Job type:</Label>
-          <Select
-            defaultValue=''
-            name='locationType'
-          >
-            <SelectTrigger className=''>
-              <SelectValue placeholder='Select a Location Type' />
+        <div className="flex flex-col gap-4">
+          <Label htmlFor="locationType">Job type:</Label>
+          <Select defaultValue="" name="locationType">
+            <SelectTrigger className="">
+              <SelectValue placeholder="Select a Location Type" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value='Remote'>Remote</SelectItem>
-              <SelectItem value='On site'>On site</SelectItem>
-              <SelectItem value='Hybrid'>Hybrid</SelectItem>
+              <SelectItem value="Remote">Remote</SelectItem>
+              <SelectItem value="On site">On site</SelectItem>
+              <SelectItem value="Hybrid">Hybrid</SelectItem>
             </SelectContent>
           </Select>
         </div>
-        <div className='flex flex-col gap-4'>
-          <Label htmlFor='location'>Location</Label>
-          <Input
-            type='text'
-            name='location'
-            required
-          />
+        <div className="flex flex-col gap-4">
+          <Label htmlFor="location">Location</Label>
+          <Input type="text" name="location" required />
         </div>
-        <div className='flex flex-row items-center  gap-4 mt-4'>
-          <Label htmlFor='applicationEmail' className='w-52'>Apply Email</Label>
+        <div className="flex flex-row items-center  gap-4 mt-4">
+          <Label htmlFor="applicationEmail" className="w-52">
+            Apply Email
+          </Label>
           <Input
-            type='text'
-            name='applicationEmail'
+            type="text"
+            name="applicationEmail"
             required
-            className='w-full'
+            className="w-full"
           />
           <span>or</span>
-          <Label htmlFor='applicationUrl' className='w-48'>Apply Url</Label>
+          <Label htmlFor="applicationUrl" className="w-48">
+            Apply Url
+          </Label>
           <Input
-            type='text'
-            name='applicationUrl'
+            type="text"
+            name="applicationUrl"
             required
-            className='w-full'
+            className="w-full"
           />
         </div>
-        <div className='flex flex-col gap-4'>
-          <Label htmlFor='salary'>Salary</Label>
-          <Input
-            type='text'
-            name='salary'
-            required
-          />
+        <div className="flex flex-col gap-4">
+          <Label htmlFor="salary">Salary</Label>
+          <Input type="text" name="salary" required />
         </div>
-        <div className='flex flex-col gap-4'>
-          <Label htmlFor='description'>Description</Label>
-          
-          <TextAreaComponent/>
-        </div>
-        
+        <div className="flex flex-col gap-4">
+          <Label htmlFor="description">Description</Label>
 
-        <Button
-          type='submit'
-          className=''
-        >
+          <TextAreaComponent />
+        </div>
+
+        <Button type="submit" className="">
           Add Record
         </Button>
       </form>
