@@ -13,33 +13,33 @@ const JobId = async ({ params }: { params: { id: string } }) => {
           <span className="desc">Job title:</span>
           {jobId[0].title}
         </h1>
-        <p className="text-xl  max-sm:text-lg">
+        <div className="text-xl  max-sm:text-lg">
           <span className="desc">Company:</span>
           {jobId[0].companyName}
-        </p>
-        <p className="text-xl  max-sm:text-lg">
+        </div>
+        <div className="text-xl  max-sm:text-lg">
           <span className="desc">Location:</span>
           {jobId[0].location}
-        </p>
-        <p className="text-xl  max-sm:text-lg">
+        </div>
+        <div className="text-xl  max-sm:text-lg">
           <span className="desc">Location type:</span>
           {jobId[0].locationType}
-        </p>
-        <p className="text-xl  max-sm:text-lg">
+        </div>
+        <div className="text-xl  max-sm:text-lg">
           <span className="desc">Job type:</span>
           {jobId[0].type}
-        </p>
-        <p className="text-xl  max-sm:text-lg">
+        </div>
+        <div className="text-xl  max-sm:text-lg">
           <span className="desc">Salary:</span>${jobId[0].salary.toFixed(2)}
-        </p>
-        <p className="text-xl  max-sm:text-lg">
+        </div>
+        <div className="text-xl  max-sm:text-lg">
           <span className="desc">Email:</span>
           <a href="mailto:">{jobId[0].applicationEmail}</a>
-        </p>
-        <p className="text-xl  max-sm:text-lg">
+        </div>
+        <div className="text-xl  max-sm:text-lg">
           <span className="desc">Url:</span>
           <a href={jobId[0].applicationUrl}>{jobId[0].applicationUrl}</a>
-        </p>
+        </div>
         <Link
           href={`/checkout?total=${jobId[0].salary}`}
           className="mt-4 bg-primary text-center  text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 rounded-md "
